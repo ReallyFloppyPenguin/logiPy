@@ -216,7 +216,7 @@ LOGI_DEVICETYPE_ALL             = LOGI_DEVICETYPE_MONOCHROME | LOGI_DEVICETYPE_R
 #
 _LOGI_SHARED_SDK_LED            = ctypes.c_int(1)
 
-class SDKNotFoundException:
+class SDKNotFoundException(BaseException):
     pass
 
 def load_dll(path_dll = None):
